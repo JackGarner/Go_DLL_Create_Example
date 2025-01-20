@@ -48,7 +48,8 @@ Install gcc
 ### Check 1:
 Execute the following commands in the terminal:
         
-        Rundll32.exe .\example_from_go.dll,sayHello
+    Rundll32.exe .\example_from_go.dll,sayHello
+    
 If no error occurs, then everything is okay.
 fmt.Println("Hello world!") - will not be displayed on the screen!!!
 
