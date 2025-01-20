@@ -51,7 +51,7 @@
 ### 5.1 Проверка 1:
 Выпонить команды в терминале:
 
-        Rundll32.exe .\example_from_go.dll,sayHello
+    Rundll32.exe .\example_from_go.dll,sayHello
 
 Если никакой ошибки не возникло, значит все ок.
 fmt.Println("Hello world!") - выводится на экран не будет!!!
@@ -59,20 +59,20 @@ fmt.Println("Hello world!") - выводится на экран не будет
 ### 5.2 Проверка 2:
 Создаем файл checkDll.go и встаяляем след код
 
-        package main
+    package main
 
-        import "C"
-        import (
-            "fmt"
-            "syscall"
-        )
+    import "C"
+    import (
+        "fmt"
+        "syscall"
+    )
 
-        func main() {
-            dll := syscall.MustLoadDLL("example_from_go.dll")
-            proc := dll.MustFindProc("sayHello")
-            proc.Call()
-            fmt.Println("Function executed successfully.")
-        }
+    func main() {
+        dll := syscall.MustLoadDLL("example_from_go.dll")
+        proc := dll.MustFindProc("sayHello")
+        proc.Call()
+        fmt.Println("Function executed successfully.")
+    }
         
 Запускаем 
 
